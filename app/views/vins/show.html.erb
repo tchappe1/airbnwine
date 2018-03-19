@@ -1,2 +1,17 @@
 <h1>Vins#show</h1>
 <p>Find me in app/views/vins/show.html.erb</p>
+
+</ul>
+  <li> <strong> <%= @vin.producteur %> </strong></li>
+  <li> <strong> <%= @vin.region %> </strong></li>
+  <li> <strong> <%= @vin.appelation %></strong> </li>
+  <li> <strong> <%= @vin.vignoble %></strong> </li>
+  <li> <strong> <%= @vin.alcool %> </strong></li>
+  <li> <strong> <%= @vin.parker %> </strong></li>
+  <li> <strong> <%= @vin.jrobinson %> </strong></li>
+  <li> <strong> <%= @vin.prix_btl %> </strong></li>
+  <li> <strong> <%= @vin.annee %></strong> </li>
+  <li> <strong> <%= @vin.nb_btl_caisse %></strong> </li>
+</ul>
+
+<%= link_to 'List of vins', vins_index_path %>

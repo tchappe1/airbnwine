@@ -1,9 +1,12 @@
 class VinsController < ApplicationController
+before_action :set_vin, except: [:index, :new]
+
   def index
     @vins = Vin.all
   end
 
   def show
+    @vin
   end
 
   def edit
@@ -21,4 +24,14 @@ class VinsController < ApplicationController
   def destroy
   end
 
+end
+
+private
+
+def set_vin
+  @vin = Vin.find(params[:id])
+end
+
+def vin_params
+  params.require(:restaurant).permit(:region, :appelation, :vignoble, :producteur, :alcool , :parker, :jrobinson, :prix_btl, :annee, :nb_btl_caisse)
 end
