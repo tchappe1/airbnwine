@@ -1,2 +1,10 @@
 <h1>Vins#index</h1>
 <p>Find me in app/views/vins/index.html.erb</p>
+
+<% @vins.each do |vin| %>
+<%= vin.producteur %>
+<%= vin.annee %>
+<%= vin.parker %>
+<%= vin.jrobinson %>
+<%= vin.prix_btl %>
+<% end %>
