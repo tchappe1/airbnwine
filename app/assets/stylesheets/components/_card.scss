@@ -1,0 +1,22 @@
+.card{
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  height: 193px;
+  width: 348px;
+  font-size: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.card_ul{
+  list-style:none;
+  padding-left: 10px;
+}
+
+.card_li_producteur{
+  font-size: 18px;
+}

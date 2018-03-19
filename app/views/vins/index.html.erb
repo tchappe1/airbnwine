@@ -1,16 +1,28 @@
-<h1>Vins#index</h1>
-<p>Find me in app/views/vins/index.html.erb</p>
+<div class="header">
+  <%= image_tag "index_background", width: "100%" %>
+</div>
 
-<ul>
-  <% @vins.each do |vin| %>
-  <li>
-    <%= link_to vin_path(vin) do  %>
-      <%= vin.producteur %>
-      <%= vin.annee %>
-      <%= vin.parker %>
-      <%= vin.jrobinson %>
-      <%= vin.prix_btl %>
+<div class="container">
+  <div class="row">
+
+    <% @vins.each do |vin| %>
+
+      <div class="col-xs-12 col-lg-4">
+        <div class="card">
+          <div class="card_image">
+            <%= image_tag "chateau_lafite_2009.png", width: 135 %>
+          </div>
+          <ul class="card_ul">
+
+            <li class="card_li_producteur"><%= vin.producteur %></li>
+            <li><%= vin.annee %></li>
+            <li><%= vin.parker %></li>
+            <li><%= vin.jrobinson %></li>
+            <li><%= vin.prix_btl %></li>
+
+          </ul>
+        </div>
+      </div>
     <% end %>
-  </li>
-  <% end %>
-</ul>
+  </div>
+</div>
