@@ -1,13 +1,28 @@
-<div class="">
-  <%= image_tag "index_background.jpg"%>
-  <%= image_tag "logo.png", height: 50 %>
+<div class="header">
+  <%= image_tag "index_background", width: "100%" %>
 </div>
 
+<div class="container">
+  <div class="row">
 
-<% @vins.each do |vin| %>
-<%= vin.producteur %>
-<%= vin.annee %>
-<%= vin.parker %>
-<%= vin.jrobinson %>
-<%= vin.prix_btl %>
-<% end %>
+    <% @vins.each do |vin| %>
+
+      <div class="col-xs-12 col-lg-4">
+        <div class="card">
+          <div class="card_image">
+            <%= image_tag "chateau_lafite_2009.png", width: 135 %>
+          </div>
+          <ul class="card_ul">
+
+            <li class="card_li_producteur"><%= vin.producteur %></li>
+            <li><%= vin.annee %></li>
+            <li><%= vin.parker %></li>
+            <li><%= vin.jrobinson %></li>
+            <li><%= vin.prix_btl %></li>
+
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
