@@ -6,7 +6,6 @@ before_action :set_vin, except: [:index, :new]
   end
 
   def show
-    @vin
   end
 
   def edit
