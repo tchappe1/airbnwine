@@ -1,5 +1,6 @@
 class VinsController < ApplicationController
   def index
+    @vins = Vin.all
   end
 
   def show
