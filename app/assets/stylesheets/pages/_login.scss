@@ -13,8 +13,6 @@ width: 400px;
 }
 
 .welcome_text{
-  font-family: Roboto;
-
   font-weight: lighter;
   text-align:center;
   color: white;
@@ -23,7 +21,16 @@ width: 400px;
 font-size: 50px;
 }
 
-
 .strip_line{
   font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.form_element{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.special{
+  width: 400px;
 }
