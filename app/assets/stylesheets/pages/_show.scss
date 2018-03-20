@@ -1,0 +1,46 @@
+body {
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-descript {
+  text-align: center;
+  border: 1px solid white;
+  @extend   .margin-shadow;
+}
+.margin-shadow {
+  margin: 20px;
+  box-shadow: 10px 10px 10px rgb(200, 200, 200);
+}
+.card-btl {
+  @extend   .margin-shadow;
+  background-color: #EAEAEA;
+}
+
+.first-descript {
+  margin: 15px 0;
+  color: black;
+  font-weight: bold;
+}
+
+.second-descript {
+  margin-bottom: 10px;
+  color: #AAAAAA;
+}
+
+.card-btn {
+  @extend   .margin-shadow;
+  text-align: center;
+  padding: 10px;
+}
+
+.vin-btn {
+  color: #4699DB;
+  border-radius: 10%;
+  margin: 20px;
+}
+
