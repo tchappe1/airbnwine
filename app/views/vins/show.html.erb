@@ -1,24 +1,70 @@
-<h1>Vins#show</h1>
-<p>Find me in app/views/vins/show.html.erb</p>
+<h1>show your vin details</h1>
 
-</ul>
-  <li> <strong> Producteur: </strong> <%= @vin.producteur %></li>
-  <li> <strong> Region: </strong><%= @vin.region %></li>
-  <li> <strong> Appelation: </strong><%= @vin.appelation %></li>
-  <li> <strong> Vignoble: </strong><%= @vin.vignoble %></li>
-  <li> <strong> Alcool: </strong><%= @vin.alcool %></li>
-  <li> <strong> Parker: </strong><%= @vin.parker %></li>
-  <li> <strong> J.Robinson: </strong><%= @vin.jrobinson %></li>
-  <li> <strong> Prix of one bottle: </strong><%= @vin.prix_btl %></li>
-  <li> <strong> Annee: </strong><%= @vin.annee %></li>
-  <li> <strong> Nbr_btl by caisse:</strong><%= @vin.nb_btl_caisse %></li>
-  <li> <strong> Description: </strong><%= @vin.description %></li>
-</ul>
+<div class="container">
+  <div class="content">
+    <div class="card-btl">
+      <%= image_tag "chateau_lafite_2009.png", width: 235 %>
+    </div>
 
-<%= link_to 'List of vins', vins_path %>
-<%= link_to "Edit", edit_vin_path %>
+    <div class="card-descript">
+        <div class="first-descript">
+          <%= @vin.producteur %>
+          <%= @vin.annee %>
+        </div>
 
-<%= link_to "Delete", vin_path,
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
+        <div class="second-descript">
+          <%= @vin.region %>
+          <%= @vin.appelation %>
+          <%= @vin.vignoble %>
+          <%= @vin.alcool %>
+        </div>
+
+        <div class="third-descript">
+          <%= @vin.prix_btl %>
+          <%= @vin.nb_btl_caisse %>
+        </div>
+
+        <div class="fourth-descript">
+          <%= @vin.description %>
+        </div>
+    </div>
+
+    <div class="card-btn">
+      <span class="btn btn-primary vin-btn">
+        <p>Add to cart</p>
+      </span>
+      <span class="btn btn-primary vin-btn">
+        <%= link_to 'List of vins', vins_path %>
+      </span>
+      <span class="btn btn-primary vin-btn">
+        <%= link_to "Edit", edit_vin_path %>
+      </span>
+      <span class="btn btn-primary vin-btn">
+      <%= link_to "Delete", vin_path,
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+      </span>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
