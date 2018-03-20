@@ -10,5 +10,9 @@
   <%= a.input :annee %>
   <%= a.input :nb_btl_caisse %>
   <%= a.input :description %>
+
+  <%= a.input :photo %>
+  <%= a.input :photo_cache, as: :hidden %>
+
   <%= a.button :submit, class: 'btn btn-warning'%>
   <% end %>

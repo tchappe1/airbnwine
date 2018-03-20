@@ -51,6 +51,6 @@ private
   end
 
   def vin_params
-    params.require(:vin).permit(:region, :appelation, :vignoble, :producteur, :alcool , :parker, :jrobinson, :prix_btl, :annee, :nb_btl_caisse, :description)
+    params.require(:vin).permit(:region, :appelation, :vignoble, :producteur, :alcool , :parker, :jrobinson, :prix_btl, :annee, :nb_btl_caisse, :description, :photo)
   end
 end

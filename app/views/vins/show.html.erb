@@ -3,7 +3,9 @@
 <div class="container">
   <div class="content">
     <div class="card-btl">
-      <%= image_tag "chateau_lafite_2009.png", width: 235 %>
+      <%= cl_image_tag @vin.photo, width: 235, crop: :fill %>
+      <!-- <%= image_tag "chateau_lafite_2009.png", width: 235 %> -->
+  
     </div>
 
     <div class="card-descript">
@@ -46,25 +48,6 @@
       </span>
 
     </div>
+
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
