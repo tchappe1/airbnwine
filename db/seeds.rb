@@ -15,5 +15,5 @@ Vin.create(region:'Bordeaux', appelation: 'Saint-Estèphe', vignoble: 'Médoc', 
 Vin.create(region:'Bordeaux', appelation: 'Pessac Leognan', vignoble: '', producteur: 'Clarence de Haut-Brion', alcool: 13, parker: 99, jrobinson: 18, annee: 2009, nb_btl_caisse: 6, prix_btl: 130, description: "")
 Vin.create(region:'Bordeaux', appelation: 'Saint Emilion', vignoble: '', producteur: 'Pavie Macquin', alcool: 13, parker: 99, jrobinson: 18, annee: 2009, nb_btl_caisse: 6, prix_btl: 76, description: "")
 Vin.create(region:'Bordeaux', appelation: 'Fronsac', vignoble: '', producteur: 'Haut Laroque', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: 16, description: "")
-Vin.create(region:'Bordeaux', appelation: 'Medoc', vignoble: '', producteur: 'Vieux Robin', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: , description: "")
-Vin.create(region:'Bordeaux', appelation: 'Haut-Medoc', vignoble: '', producteur: 'Les Allées de Cantermerle', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: , description: "")
+Vin.create(region:'Bordeaux', appelation: 'Medoc', vignoble: '', producteur: 'Vieux Robin', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: 20, description: "")
+Vin.create(region:'Bordeaux', appelation: 'Haut-Medoc', vignoble: '', producteur: 'Les Allées de Cantermerle', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: 20, description: "")
