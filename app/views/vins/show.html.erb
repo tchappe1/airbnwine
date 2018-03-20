@@ -2,16 +2,23 @@
 <p>Find me in app/views/vins/show.html.erb</p>
 
 </ul>
-  <li> <strong> <%= @vin.producteur %> </strong></li>
-  <li> <strong> <%= @vin.region %> </strong></li>
-  <li> <strong> <%= @vin.appelation %></strong> </li>
-  <li> <strong> <%= @vin.vignoble %></strong> </li>
-  <li> <strong> <%= @vin.alcool %> </strong></li>
-  <li> <strong> <%= @vin.parker %> </strong></li>
-  <li> <strong> <%= @vin.jrobinson %> </strong></li>
-  <li> <strong> <%= @vin.prix_btl %> </strong></li>
-  <li> <strong> <%= @vin.annee %></strong> </li>
-  <li> <strong> <%= @vin.nb_btl_caisse %></strong> </li>
+  <li> <strong> Producteur: </strong> <%= @vin.producteur %></li>
+  <li> <strong> Region: </strong><%= @vin.region %></li>
+  <li> <strong> Appelation: </strong><%= @vin.appelation %></li>
+  <li> <strong> Vignoble: </strong><%= @vin.vignoble %></li>
+  <li> <strong> Alcool: </strong><%= @vin.alcool %></li>
+  <li> <strong> Parker: </strong><%= @vin.parker %></li>
+  <li> <strong> J.Robinson: </strong><%= @vin.jrobinson %></li>
+  <li> <strong> Prix of one bottle: </strong><%= @vin.prix_btl %></li>
+  <li> <strong> Annee: </strong><%= @vin.annee %></li>
+  <li> <strong> Nbr_btl by caisse:</strong><%= @vin.nb_btl_caisse %></li>
+  <li> <strong> Description: </strong><%= @vin.description %></li>
 </ul>
 
 <%= link_to 'List of vins', vins_path %>
+<%= link_to "Edit", edit_vin_path %>
+
+<%= link_to "Delete", vin_path,
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
