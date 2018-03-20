@@ -1,30 +1,40 @@
 <div class="header">
   <%= image_tag "index_background", width: "100%" %>
 </div>
-
 <div class="container">
-  <div class="row">
 
+  <div class="row ">
+
+      <!-- <div class="block"> -->
     <% @vins.each do |vin| %>
+    <%= link_to vin_path(vin) do %>
+    <div class="col-xs-12 col-md-4  col-lg-4 ">
 
-      <div class="col-xs-12 col-lg-4">
-        <%= link_to vin_path(vin) do %>
           <div class="card">
             <div class="card_image">
-              <%= image_tag "chateau_lafite_2009.png", width: 135 %>
+              <% if vin [:photo] == nil %>
+              <% "no picture" %>
+              <% else %>
+              <%= cl_image_tag vin.photo, width: 135, height: 193,crop: :fit %>
+              <% end %>
             </div>
+            <div class="card_text">
             <ul class="card_ul">
 
               <li class="card_li_producteur"><%= vin.producteur %></li>
-              <li><%= vin.annee %></li>
-              <li><%= vin.parker %></li>
-              <li><%= vin.jrobinson %></li>
-              <li><%= vin.prix_btl %></li>
+              <li class="card_li_annee"><%= vin.annee %></li>
+              <li class="card_li_notation">Parker: <%= vin.parker %> - J.Robinson:<%= vin.jrobinson %></li>
+              <li class="card_li_price"><%= vin.prix_btl %> eur/btl</li>
+              <li class="card_li_nb_btl_caisse">caisse de <%= vin.nb_btl_caisse %></li>
 
             </ul>
+            </div>
           </div>
-        <% end %>
-      </div>
+
+</div>
+<% end %>
     <% end %>
-  </div>
+  <!-- </div> -->
+
+</div>
 </div>
