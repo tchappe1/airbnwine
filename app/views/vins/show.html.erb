@@ -3,19 +3,21 @@
 <div class="container">
 
   <div class="top-bar">
-    <span class="btn btn-primary vin-btn">
+    <span class="menu">
+       <%= image_tag "icons/menu", width: 30%>
       <%= link_to 'List of vins', vins_path %>
     </span>
-    <span class="btn btn-primary vin-btn">
+    <span class="btn btn-primary ">
       <%= link_to "Edit", edit_vin_path %>
     </span>
-    <span class="btn btn-primary vin-btn">
+    <span class="btn btn-primary ">
       <%= link_to "Delete", vin_path,
       method: :delete,
       data: { confirm: "Are you sure?" } %>
     </span>
-    <span class="btn btn-primary vin-btn">
-      <%= link_to 'Order and pay', vins_path %>
+    <span class="pay">
+      <p>Order and pay
+      <%= image_tag "icons/cart", width: 20%></p>
     </span>
   </div>
 
@@ -48,7 +50,7 @@
         </div>
 
         <div class="card-btn">
-          <span class="btn btn-primary vin-btn">
+          <span class="btn btn-primary ">
             <p>Add to cart</p>
           </span>
           <h2><%= @vin.prix_btl %></h2><p>euro/la bouteille</p>
