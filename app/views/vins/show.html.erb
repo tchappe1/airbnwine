@@ -1,71 +1,87 @@
-<h1>show your vin details</h1>
-
-<div class="container">
+<div class="show_wrapper">
 
   <div class="top-bar">
-    <span class="menu">
-       <%= image_tag "icons/menu", width: 30%>
-      <%= link_to 'List of vins', vins_path %>
-    </span>
-    <span class="btn btn-primary ">
-      <%= link_to "Edit", edit_vin_path %>
-    </span>
-    <span class="btn btn-primary ">
-      <%= link_to "Delete", vin_path,
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-    </span>
-    <span class="pay">
-      <p>Order and pay
-      <%= image_tag "icons/cart", width: 20%></p>
-    </span>
+    <div class="back_to_list">
+      <%= image_tag "icons/list", width: 30%>
+      <%= link_to 'Back to list', vins_path %>
+    </div>
+
+    <div class="admin_buttons">
+      <div class="edit_button">
+        <%= link_to "Edit", edit_vin_path %>
+      </div>
+      <div class="edit_button">
+        <%= link_to "Delete", vin_path, method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+
+    <div class="pay">
+      Order and pay
+      <%= image_tag "icons/cart-simple", width: 30%>
+    </div>
   </div>
 
   <div class="content">
+    <div class="card-btl">
+      <%= cl_image_tag @vin.photo, width: 235, crop: :fill %>
+    </div>
 
-        <div class="card-btl">
-          <%= cl_image_tag @vin.photo, width: 235, crop: :fill %>
-       </div>
+    <div class="card-descript">
+      <div class="first-descript">
+        <%= @vin.producteur %>
+        <%= @vin.annee %>
+      </div>
 
+      <div class="second-descript">
+        <%= @vin.region %>
+        <%= @vin.appelation %>
+        <%= @vin.vignoble %>
+      </div>
 
-        <div class="card-descript">
-          <div class="first-descript">
-            <%= @vin.producteur %>
-            <%= @vin.annee %>
-          </div>
+      <div class="fourth-descript">
+        <%= @vin.description %>
+      </div>
+    </div>
 
-          <div class="second-descript">
-            <%= @vin.region %>
-            <%= @vin.appelation %>
-            <%= @vin.vignoble %>
-            <%= @vin.alcool %>
-          </div>
+    <div class="card-details">
+      <div class="add_to_cart">
+        Add to cart
+      </div>
+      <div class="price">
+        <div class="amount"><%= @vin.prix_btl %></div>
+        <div class="currency">Eur</div>
+        <div class="per_bottle">la bouteille</div>
+      </div>
 
-          <div class="third-descript">
-            <%= @vin.prix_btl %>
-            <%= @vin.nb_btl_caisse %>
-          </div>
+      <div class="details">
 
-          <div class="fourth-descript">
-            <%= @vin.description %>
-          </div>
+        <div class="show_description_fields">
+          <ul style="list-style: none;">
+            <li>Region</li>
+            <li>Apellation</li>
+            <li>Vignoble</li>
+            <li>Alcool</li>
+            <li>Parker</li>
+            <li>J. Robinson</li>
+            <li>Année</li>
+            <li>Btl/caisses</li>
+          </ul>
         </div>
 
-        <div class="card-btn">
-          <span class="btn btn-primary ">
-            <p>Add to cart</p>
-          </span>
-          <h2><%= @vin.prix_btl %></h2><p>euro/la bouteille</p>
-          <div class="details">
-            <p class="list-details"><strong>region:</strong>  <span> <%= @vin.region %> </p></span>
-            <p class="list-details"><strong>appelation:</strong> <span> <%= @vin.appelation %></p></span>
-            <p class="list-details"><strong>vignoble:</strong> <span> <%= @vin.vignoble %></p></span>
-            <p class="list-details"><strong>alcool:</strong> <span> <%= @vin.alcool %></p></span>
-            <p class="list-details"><strong>parker:</strong> <span> <%= @vin.parker %></p></span>
-            <p class="list-details"><strong>jrobinson:</strong> <span> <%= @vin.jrobinson %></p></span>
-            <p class="list-details"><strong>annee:</strong> <span> <%= @vin.annee %></p></span>
-            <p class="list-details"><strong>nb_btl_caisse:</strong> <span> <%= @vin.nb_btl_caisse %></p></span>
-          </div>
+        <div class="show_description_values">
+          <ul style="list-style: none;">
+            <li><%= @vin.region %></li>
+            <li><%= @vin.appelation %></li>
+            <li><%= @vin.vignoble %></li>
+            <li><%= @vin.alcool %></li>
+            <li><%= @vin.parker %></li>
+            <li><%= @vin.jrobinson %></li>
+            <li><%= @vin.annee %></li>
+            <li><%= @vin.nb_btl_caisse %></li>
+          </ul>
         </div>
+
+      </div>
+    </div>
   </div>
 </div>
