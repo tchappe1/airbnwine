@@ -1,20 +1,16 @@
-body {
-  background-color: white;
+.margin-shadow {
+  margin: 20px;
+  box-shadow: 10px 10px 10px rgb(200, 200, 200);
 }
-
 .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card-descript {
   text-align: center;
   border: 1px solid white;
   @extend   .margin-shadow;
-}
-.margin-shadow {
-  margin: 20px;
-  box-shadow: 10px 10px 10px rgb(200, 200, 200);
 }
 .card-btl {
   @extend   .margin-shadow;
@@ -36,6 +32,7 @@ body {
   @extend   .margin-shadow;
   text-align: center;
   padding: 10px;
+  width: 200px;
 }
 
 .vin-btn {
@@ -43,4 +40,9 @@ body {
   border-radius: 10%;
   margin: 20px;
 }
-
+.top-bar {
+  text-align: center;
+}
+.details {
+  font-size: 10px;
+}

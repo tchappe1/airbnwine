@@ -1,52 +1,69 @@
 <h1>show your vin details</h1>
 
 <div class="container">
-  <div class="content">
-    <div class="card-btl">
-      <%= cl_image_tag @vin.photo, width: 235, crop: :fill %>
 
-    </div>
-
-    <div class="card-descript">
-        <div class="first-descript">
-          <%= @vin.producteur %>
-          <%= @vin.annee %>
-        </div>
-
-        <div class="second-descript">
-          <%= @vin.region %>
-          <%= @vin.appelation %>
-          <%= @vin.vignoble %>
-          <%= @vin.alcool %>
-        </div>
-
-        <div class="third-descript">
-          <%= @vin.prix_btl %>
-          <%= @vin.nb_btl_caisse %>
-        </div>
-
-        <div class="fourth-descript">
-          <%= @vin.description %>
-        </div>
-    </div>
-
-    <div class="card-btn">
-      <span class="btn btn-primary vin-btn">
-        <p>Add to cart</p>
-      </span>
-      <span class="btn btn-primary vin-btn">
-        <%= link_to 'List of vins', vins_path %>
-      </span>
-      <span class="btn btn-primary vin-btn">
-        <%= link_to "Edit", edit_vin_path %>
-      </span>
-      <span class="btn btn-primary vin-btn">
+  <div class="top-bar">
+    <span class="btn btn-primary vin-btn">
+      <%= link_to 'List of vins', vins_path %>
+    </span>
+    <span class="btn btn-primary vin-btn">
+      <%= link_to "Edit", edit_vin_path %>
+    </span>
+    <span class="btn btn-primary vin-btn">
       <%= link_to "Delete", vin_path,
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-      </span>
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+    </span>
+    <span class="btn btn-primary vin-btn">
+      <%= link_to 'Order and pay', vins_path %>
+    </span>
+  </div>
 
-    </div>
+  <div class="content">
 
+        <div class="card-btl">
+          <%= cl_image_tag @vin.photo, width: 235, crop: :fill %>
+       </div>
+
+
+        <div class="card-descript">
+          <div class="first-descript">
+            <%= @vin.producteur %>
+            <%= @vin.annee %>
+          </div>
+
+          <div class="second-descript">
+            <%= @vin.region %>
+            <%= @vin.appelation %>
+            <%= @vin.vignoble %>
+            <%= @vin.alcool %>
+          </div>
+
+          <div class="third-descript">
+            <%= @vin.prix_btl %>
+            <%= @vin.nb_btl_caisse %>
+          </div>
+
+          <div class="fourth-descript">
+            <%= @vin.description %>
+          </div>
+        </div>
+
+        <div class="card-btn">
+          <span class="btn btn-primary vin-btn">
+            <p>Add to cart</p>
+          </span>
+          <h2><%= @vin.prix_btl %></h2><p>euro/la bouteille</p>
+          <div class="details">
+            <p class="list-details"><strong>region:</strong>  <span> <%= @vin.region %> </p></span>
+            <p class="list-details"><strong>appelation:</strong> <span> <%= @vin.appelation %></p></span>
+            <p class="list-details"><strong>vignoble:</strong> <span> <%= @vin.vignoble %></p></span>
+            <p class="list-details"><strong>alcool:</strong> <span> <%= @vin.alcool %></p></span>
+            <p class="list-details"><strong>parker:</strong> <span> <%= @vin.parker %></p></span>
+            <p class="list-details"><strong>jrobinson:</strong> <span> <%= @vin.jrobinson %></p></span>
+            <p class="list-details"><strong>annee:</strong> <span> <%= @vin.annee %></p></span>
+            <p class="list-details"><strong>nb_btl_caisse:</strong> <span> <%= @vin.nb_btl_caisse %></p></span>
+          </div>
+        </div>
   </div>
 </div>
