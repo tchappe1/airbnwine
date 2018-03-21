@@ -13,7 +13,10 @@
           <div class="card">
             <div class="card_image">
               <% if vin [:photo] == nil %>
+
+
               <p> <%="no picture" %></p>
+
               <% else %>
               <%= cl_image_tag vin.photo, width: 135, height: 193,crop: :fit %>
               <% end %>
