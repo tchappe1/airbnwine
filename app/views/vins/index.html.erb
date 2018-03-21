@@ -28,7 +28,7 @@
               <% if vin [:photo] == nil %>
 
 
-              <p> <%="no picture" %></p>
+              <%= image_tag "chateau_lafite_2009.png", width: 135, height: 193,crop: :fit %>
 
               <% else %>
               <%= cl_image_tag vin.photo, width: 135, height: 193,crop: :fit %>
