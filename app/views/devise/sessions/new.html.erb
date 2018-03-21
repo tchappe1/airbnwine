@@ -1,40 +1,35 @@
-
 <div class="login_page">
 
-    <!-- <%= image_tag "login_background.jpg", width: "100%" %> -->
-    <div class="container-fluid">
+<div class="left_block">
+
+</div>
 
 
-          <div class="login_card">
-            <div class="welcome_text company_name">
-              AirbnWine
-            </div>
+  <div class="right_block">
+    <div class="login_card">
+      <div class="welcome_text company_name">
+        AirbnWine
+      </div>
+      <div class="welcome_text strip_line">
+        Fine wine. Good price.
+      </div>
 
-            <div class="welcome_text strip_line">
-              Fine wine. Good price.
-            </div>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <!-- <%= f.input :email, required: false, autofocus: true, :class => 'form-control'%> -->
+        <%= f.input :email, label: false, placeholder: 'Enter email' , :class => 'form-control form_element'%>
+        <br>
+        <%= f.input :password, label: false, required: false, class: "form-control form_element" %>
+      </div>
 
+      <div class="form-actions">
+        <br>
 
-            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="form-group">
-              <!-- <%= f.input :email, required: false, autofocus: true,  :class => 'form-control'%> -->
-              <%= f.input :email, label: false, placeholder: 'Enter email' ,  :class => 'form-control form_element'%>
-              <br>
-              <%= f.input :password, label: false,  required: false,  class: "form-control form_element" %>
-            </div>
+        <%= f.button :submit, "Log in" , class: "btn btn-primary special font-weight-light "%>
 
-            <div class="form-actions">
-              <br>
-
-              <%= f.button :submit, "Log in" , class: "btn btn-primary special  font-weight-light "%>
-
-            </div>
-            <% end %>
-
-            <%= render "devise/shared/links" %>
-
-          </div>
-
-
-    </div>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
 </div>

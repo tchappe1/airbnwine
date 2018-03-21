@@ -1,14 +1,26 @@
 .login_page{
-  position: relative;
-  background-image: url('login_background.jpg');
+  display: flex;
 
+  background-color: white;
   height: calc(100vh - 70px);
 }
 
+.left_block{
+  background-color: blue;
+  width: 50%;
+}
+
+.right_block{
+  background-color: yellow;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+
 .login_card{
-  margin-top: 130px;
-  margin-left: 50px;
-  float:left;
+margin-left: auto;
+margin-right: auto;
   width: 400px;
 }
 
@@ -34,3 +46,7 @@ font-size: 50px;
 .special{
   width: 400px;
 }
+
+
+
+// CSS code for New2.html.erb
