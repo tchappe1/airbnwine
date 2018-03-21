@@ -1,4 +1,93 @@
-<h1>Edit here</h1>
+<div class="show_wrapper">
 
-<%= render "form-for", vin: @vin %>
-<%= link_to 'List of vins', vins_path %>
+  <div class="top-bar">
+    <div class="back_to_list">
+      <%= image_tag "icons/list.svg", width: 30%>
+      <%= link_to 'Back to list', vins_path %>
+    </div>
+
+    <div class="admin_buttons">
+      <div class="edit_button">
+        <%= link_to "Edit", edit_vin_path %>
+      </div>
+      <div class="edit_button">
+        <%= link_to "Delete", vin_path, method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+
+    <div class="pay">
+      Order and pay
+      <%= image_tag "icons/cart-simple.svg", width: 30%>
+    </div>
+  </div>
+<%= simple_form_for @vin do |a| %>
+<%= a.input :photo %>
+<%= a.input :photo_cache, as: :hidden %>
+  <div class="content">
+
+
+    <div class="card-btl">
+      <%= cl_image_tag @vin.photo, width: 235, height: 498, crop: :fill %>
+    </div>
+
+    <div class="card-descript">
+      <div class="first-descript">
+        <%= a.input :producteur, label: false  %>
+        <%= @vin.annee %>
+      </div>
+
+      <div class="second-descript">
+        <%= @vin.region %>
+        <%= @vin.appelation %>
+        <%= @vin.vignoble %>
+      </div>
+
+      <div class="fourth-descript">
+        <%= a.input :description, label: false, as: :text %>
+      </div>
+    </div>
+
+    <div class="card-details">
+      <div class="price">
+        <div class="amount"><%= a.input :prix_btl, label: false  %></div>
+        <div class="currency">Eur</div>
+        <div class="per_bottle">la bouteille</div>
+      </div>
+
+      <div class="details">
+
+        <div class="show_description_fields">
+          <ul style="list-style: none;">
+            <li>Region</li>
+            <li>Apellation</li>
+            <li>Vignoble</li>
+            <li>Alcool</li>
+            <li>Parker</li>
+            <li>J. Robinson</li>
+            <li>Année</li>
+            <li>Btl/caisses</li>
+          </ul>
+        </div>
+
+        <div class="show_description_values">
+          <ul style="list-style: none;">
+            <li><%= a.input_field :region, label: false, class: "edit_input" %></li>
+            <li><%= a.input_field :appelation, label: false, class: "edit_input"  %></li>
+            <li><%= a.input_field :vignoble, label: false, class: "edit_input"  %></li>
+            <li><%= a.input_field :alcool, label: false, class: "edit_input"  %></li>
+            <li><%= a.input_field :parker, label: false, class: "edit_input"  %></li>
+            <li><%= a.input_field :jrobinson, label: false, class: "edit_input"  %></li>
+            <li><%= a.input_field :annee, label: false, class: "edit_input"  %></li>
+            <li><%= a.input_field :nb_btl_caisse, label: false, class: "edit_input"  %></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="">
+    <%= a.button :submit, class: 'btn btn-warning'%>
+  </div>
+  <% end %>
+</div>
