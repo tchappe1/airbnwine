@@ -22,7 +22,10 @@
   color: black;
   font-weight: bold;
 }
-
+.btn {
+  margin: 15px;
+  border-radius: 10%;
+}
 .second-descript {
   margin-bottom: 10px;
   color: #AAAAAA;
@@ -35,13 +38,18 @@
   width: 200px;
 }
 
-.vin-btn {
-  color: #4699DB;
-  border-radius: 10%;
-  margin: 20px;
-}
 .top-bar {
   text-align: center;
+  position: relative;
+}
+.menu {
+  position: absolute;
+  left: 10px;
+  color: #831F40;
+}
+.pay {
+  position: absolute;
+  right: 10px;
 }
 .details {
   font-size: 10px;
