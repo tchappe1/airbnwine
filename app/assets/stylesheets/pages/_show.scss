@@ -73,12 +73,13 @@ margin: 10px;
   width: 25%;
   display: flex;
   justify-content:center;
+  flex-direction: column;
 }
 
 .card-descript {
   width: 50%;
   display: flex;
-  justify-content:center;
+  justify-content:flex-start;
   flex-direction: column;
   padding-left: 30px;
   padding-right: 70px;
@@ -129,6 +130,7 @@ padding: 0;
 
 .amount{
   margin: 10px;
+  width: 140px;
   font-size: 48px;
   font-weight: 100;
   display: flex;
@@ -160,8 +162,8 @@ padding: 0;
 }
 
 .details li {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .show_description_fields{
