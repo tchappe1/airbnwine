@@ -1,19 +1,16 @@
 class VinsController < ApplicationController
 before_action :set_vin, except: [:index, :new, :create]
 
-
-
-  def add_to_cart
-    @cart_count += 1
-  end
-
   def index
-    @vins = Vin.all
+    if params[:query].present?
+      @vins = Vin.where("producteur ILIKE ?", "%#{params[:query]}%")
+    else
+      @vins = Vin.all
+    end
   end
 
   def show
-    @cart = []
-    @cart_count = 0
+    @order_item = OrderItem.new
   end
 
   def edit

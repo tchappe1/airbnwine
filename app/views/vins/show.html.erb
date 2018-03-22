@@ -13,6 +13,7 @@
       <div class="edit_button">
         <%= link_to "Delete", vin_path, method: :delete, data: { confirm: "Are you sure?" } %>
       </div>
+
     </div>
 
     <div class="pay">
@@ -44,17 +45,13 @@
       </div>
     </div>
 
-    <div class="card-details">
+    <div class="">
+      <%= simple_form_for [@vin, @order_item] do |f| %>
 
-      <button type="button" onclick="myFunction()">Add to cart</button>
-      <!-- <script>
-        function myFunction() {
-          const add_to_cart_button = document.getElementById("add_to_cart_button");
-          <%=  @cart_count += 1%>
-          console.log(<%=  @cart_count%>);
-        }
-        myfunction()
-      </script> -->
+        <%= f.submit "add to cart", class: "btn btn-primary" %>
+      <% end %>
+      <!-- <button type="button" onclick="myFunction()">Add to cart</button> -->
+
 
 
       <!-- <div id="add_to_cart_button">
