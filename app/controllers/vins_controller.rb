@@ -1,5 +1,5 @@
 class VinsController < ApplicationController
-before_action :set_vin, except: [:index, :new]
+before_action :set_vin, except: [:index, :new, :create]
 
   def index
     @vins = Vin.all
@@ -12,11 +12,11 @@ before_action :set_vin, except: [:index, :new]
   end
 
   def new
-    @vin = Vin.new(vin_params)
+    @vin = Vin.new
   end
 
   def create
-    @vin = vin.new(vin_params)
+    @vin = Vin.new(vin_params)
       if @vin.save
         redirect_to vins_path
       else
