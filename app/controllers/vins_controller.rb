@@ -2,7 +2,11 @@ class VinsController < ApplicationController
 before_action :set_vin, except: [:index, :new, :create]
 
   def index
-    @vins = Vin.all
+    if params[:query].present?
+      @vins = Vin.where("producteur ILIKE ?", "%#{params[:query]}%")
+    else
+      @vins = Vin.all
+    end
   end
 
   def show
