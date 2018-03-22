@@ -1,11 +1,19 @@
 class VinsController < ApplicationController
 before_action :set_vin, except: [:index, :new, :create]
 
+
+
+  def add_to_cart
+    @cart_count += 1
+  end
+
   def index
     @vins = Vin.all
   end
 
   def show
+    @cart = []
+    @cart_count = 0
   end
 
   def edit

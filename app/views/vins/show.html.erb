@@ -38,15 +38,28 @@
         <%= @vin.vignoble %>
       </div>
 
+
       <div class="fourth-descript">
         <%= @vin.description %>
       </div>
     </div>
 
     <div class="card-details">
-      <div class="add_to_cart">
+
+      <button type="button" onclick="myFunction()">Add to cart</button>
+      <!-- <script>
+        function myFunction() {
+          const add_to_cart_button = document.getElementById("add_to_cart_button");
+          <%=  @cart_count += 1%>
+          console.log(<%=  @cart_count%>);
+        }
+        myfunction()
+      </script> -->
+
+
+      <!-- <div id="add_to_cart_button">
         Add to cart
-      </div>
+      </div> -->
       <div class="price">
         <div class="amount"><%= @vin.prix_btl %></div>
         <div class="currency">Eur</div>
@@ -85,3 +98,11 @@
     </div>
   </div>
 </div>
+
+<!-- <script type="text/javascript">
+  const add_to_cart_button = document.getElementById("add_to_cart_button");
+  console.log(add_to_cart_button);
+  add_to_cart_button.addEventListener("click", () => {
+    console.log(add_to_cart_button);
+  });
+</script> -->
