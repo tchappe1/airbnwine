@@ -44,12 +44,19 @@
   </div>
 
   <div class="search">
-    <%= image_tag "icons/search.svg", width: 30, :class => "search_image"%>
+    <!-- <%= image_tag "icons/search.svg", width: 30, :class => "search_image"%>
     seach your favorite wine...
 
     <div class="search_button">
       Search
-    </div>
+    </div> -->
+    <%= form_tag vins_path, method: :get do %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a wine..."
+  %>
+<% end %>
   </div>
 
 </div>
