@@ -26,8 +26,8 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to vin_path(@vin), notice: 'Vin was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to vin_path(@vin), notice: 'Review was successfully destroyed.' }
+
     end
   end
 
