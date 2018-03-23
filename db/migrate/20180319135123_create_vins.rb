@@ -6,9 +6,9 @@ class CreateVins < ActiveRecord::Migration[5.1]
       t.string :vignoble
       t.string :producteur
       t.string :alcool
-      t.integer :parker
-      t.integer :jrobinson
-      t.integer :prix_btl
+      t.decimal :parker
+      t.decimal :jrobinson
+      t.decimal :prix_btl
       t.integer :annee
       t.integer :nb_btl_caisse
 
