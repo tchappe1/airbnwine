@@ -27,6 +27,7 @@ class ReviewsController < ApplicationController
     @review.destroy
     respond_to do |format|
       format.html { redirect_to vin_path(@vin), notice: 'Review was successfully destroyed.' }
+
     end
   end
 
