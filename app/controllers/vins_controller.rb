@@ -10,6 +10,8 @@ before_action :set_vin, except: [:index, :new, :create]
   end
 
   def show
+    @vin = Vin.find(params[:id])
+    @new_review = Review.new
   end
 
   def edit
