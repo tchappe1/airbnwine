@@ -18,10 +18,3 @@ Vin.create!(active: true, region:'Bordeaux', appelation: 'Saint Emilion', vignob
 Vin.create!(active: true, region:'Bordeaux', appelation: 'Fronsac', vignoble: '', producteur: 'Haut Laroque', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: 16, description: "")
 Vin.create!(active: true, region:'Bordeaux', appelation: 'Medoc', vignoble: '', producteur: 'Vieux Robin', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: 20, description: "")
 Vin.create!(active: true, region:'Bordeaux', appelation: 'Haut-Medoc', vignoble: '', producteur: 'Les Allées de Cantermerle', alcool: 13, parker: 99, jrobinson: 18, annee: 2010, nb_btl_caisse: 6, prix_btl: 20, description: "")
-
-
-OrderStatus.delete_all
-OrderStatus.create! id: 1, name: "In Progress"
-OrderStatus.create! id: 2, name: "Placed"
-OrderStatus.create! id: 3, name: "Shipped"
-OrderStatus.create! id: 4, name: "Cancelled"

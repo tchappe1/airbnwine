@@ -4,5 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :order_items
+  has_many :orders
+
+  def current_order
+    orders.first
+  end
 end
