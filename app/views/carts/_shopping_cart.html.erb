@@ -7,6 +7,10 @@
     </ul>
   </div>
 <% end %>
+
+<div class="shopping-card">
+
+<h1>You cart</h1>
 <% if @order_items.size == 0 %>
   <p class="text-center">
     There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
@@ -14,8 +18,13 @@
 <% else %>
   <% @order_items.each do |order_item| %>
 
-  <%= order_item.vin.producteur %>
-  <%= order_item.quantity %>
+  <%= order_item.vin.producteur %> - quantity: 1
 <br>
   <% end %>
 <% end %>
+<br>
+<div class="edit_button">
+
+  <%= link_to 'Go to payment', vins_path %>
+</div>
+</div>
