@@ -85,3 +85,12 @@
     </div>
   </div>
 </div>
+
+      <% @vin.reviews.each do |review| %>
+       <p> <%= review.content %> </p>
+
+      <% end %>
+
+
+  <%= render 'reviews/form', vin: @vin, review: @review %>
+
