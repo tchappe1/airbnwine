@@ -10,8 +10,11 @@ before_action :set_vin, except: [:index, :new, :create]
   end
 
   def show
+
+    @order_item = OrderItem.new
     @vin = Vin.find(params[:id])
     @new_review = Review.new
+
   end
 
   def edit
@@ -31,23 +34,16 @@ before_action :set_vin, except: [:index, :new, :create]
   end
 
   def update
-    respond_to do |format|
       if @vin.update(vin_params)
-        format.html { redirect_to @vin, notice: 'vin was successfully updated.' }
-        format.json { render :show, status: :ok, location: @vin }
+        redirect_to @vin, notice: 'vin was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @vin.errors, status: :unprocessable_entity }
+        render :edit
       end
-    end
   end
 
   def destroy
     @vin.destroy
-    respond_to do |format|
-      format.html { redirect_to vins_url, notice: 'Vin was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to vins_path, notice: 'Vin was successfully destroyed.'
   end
 
 private

@@ -13,10 +13,12 @@
       <div class="edit_button">
         <%= link_to "Delete", vin_path, method: :delete, data: { confirm: "Are you sure?" } %>
       </div>
+
     </div>
 
     <div class="pay">
-      Order and pay
+
+      <%= link_to "Order and pay", cart_path %>
       <%= image_tag "icons/cart-simple.svg", width: 30%>
     </div>
   </div>
@@ -38,15 +40,24 @@
         <%= @vin.vignoble %>
       </div>
 
+
       <div class="fourth-descript">
         <%= @vin.description %>
       </div>
     </div>
 
-    <div class="card-details">
-      <div class="add_to_cart">
+    <div class="">
+      <%= simple_form_for [@vin, @order_item] do |f| %>
+
+        <%= f.submit "add to cart", class: "btn btn-primary" %>
+      <% end %>
+      <!-- <button type="button" onclick="myFunction()">Add to cart</button> -->
+
+
+
+      <!-- <div id="add_to_cart_button">
         Add to cart
-      </div>
+      </div> -->
       <div class="price">
         <div class="amount"><%= @vin.prix_btl %></div>
         <div class="currency">Eur</div>
@@ -98,7 +109,4 @@
     </div>
   </div>
 </div>
-
-
-
 
