@@ -11,6 +11,7 @@ class CreateVins < ActiveRecord::Migration[5.1]
       t.decimal :prix_btl
       t.integer :annee
       t.integer :nb_btl_caisse
+      t.boolean :active
 
       t.timestamps
     end

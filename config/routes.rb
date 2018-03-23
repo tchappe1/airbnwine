@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  get 'orders/order'
+  get 'carts/show'
 
+  get 'orders/order'
+  
+    resource :cart, only: [:show]
     resources :vins do
-        resources :order_items, only: [:new, :create]
+        resources :order_items, only: [:create, :update, :destroy]
     end
 
   devise_for :users

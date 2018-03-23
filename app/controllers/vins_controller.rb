@@ -10,7 +10,7 @@ before_action :set_vin, except: [:index, :new, :create]
   end
 
   def show
-    @order_item = OrderItem.new
+    @order_item = current_order.order_items.new
   end
 
   def edit
