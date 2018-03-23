@@ -46,10 +46,6 @@ margin-left: 20px;
   margin: 0;
 }
 
-.edit_button a{
-
-}
-
 .search_button a{
   color: white;
 }
@@ -179,12 +175,13 @@ padding: 0;
 .review {
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
 }
 .context{
   padding-top: 50px;
 }
 .existing {
-  border: 1px solid;
+  border: 1px solid #821E40;
   margin: 50px 0px;
   padding: 20px;
   border-radius: 20px;
@@ -192,4 +189,8 @@ padding: 0;
 }
 .rev {
   width: 700px;
+}
+.fa {
+   font-size: 1em;
+   color: #821E40;
 }

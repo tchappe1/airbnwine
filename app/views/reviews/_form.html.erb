@@ -1,5 +1,5 @@
 <div class="rev">
-  <%= simple_form_for [ @vin, review ] do |form| %>
+  <%= simple_form_for [ @vin, review ], remote: true do |form| %>
     <%= form.input :content, as: :text, placeholder: "type your review..." %>
     <%= form.button :submit %>
   <% end %>
