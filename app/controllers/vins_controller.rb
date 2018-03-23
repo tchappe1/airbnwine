@@ -11,6 +11,7 @@ before_action :set_vin, except: [:index, :new, :create]
 
   def show
 
+
     @order_item = OrderItem.new
     @vin = Vin.find(params[:id])
     @new_review = Review.new
