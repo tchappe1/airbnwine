@@ -47,10 +47,6 @@ margin-left: 20px;
  
 }
 
-.edit_button a{
-
-}
-
 .search_button a{
   color: white;
 }
@@ -174,4 +170,28 @@ padding: 0;
   padding-left: 30px;
   font-weight: 100;
   color: #831F40;
+}
+
+//review//
+.review {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.context{
+  padding-top: 50px;
+}
+.existing {
+  border: 1px solid #821E40;
+  margin: 50px 0px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #FDECFF;
+}
+.rev {
+  width: 700px;
+}
+.fa {
+   font-size: 1em;
+   color: #821E40;
 }

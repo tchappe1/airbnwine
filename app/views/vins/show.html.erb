@@ -95,12 +95,18 @@
       </div>
     </div>
   </div>
+  <div class="review">
+    <div class="context">
+      <%= render 'reviews/form', vin: @vin, review: @new_review %>
+      <div id="existing">
+          <% @vin.reviews.each do |review| %>
+           <div class="existing">
+           <p> <%= review.content %> <%= link_to vin_review_path(@vin, review), method: :delete do %><i class="fa fa-trash" aria-hidden="true"></i></p>
+            <% end  %>
+           </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- <script type="text/javascript">
-  const add_to_cart_button = document.getElementById("add_to_cart_button");
-  console.log(add_to_cart_button);
-  add_to_cart_button.addEventListener("click", () => {
-    console.log(add_to_cart_button);
-  });
-</script> -->

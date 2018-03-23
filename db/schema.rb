@@ -10,10 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20180323130921) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "order_items", force: :cascade do |t|
     t.bigint "vin_id"
@@ -43,6 +46,12 @@ ActiveRecord::Schema.define(version: 20180323130921) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "vin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vin_id"], name: "index_reviews_on_vin_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -80,7 +89,10 @@ ActiveRecord::Schema.define(version: 20180323130921) do
     t.string "photo"
   end
 
+
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "vins"
   add_foreign_key "orders", "users"
+  add_foreign_key "reviews", "vins"
+
 end
